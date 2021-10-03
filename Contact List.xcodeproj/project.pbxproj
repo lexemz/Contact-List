@@ -14,6 +14,7 @@
 		783925662708E1C200CBEE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783925642708E1C200CBEE30 /* LaunchScreen.storyboard */; };
 		783925712708E2BD00CBEE30 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783925702708E2BD00CBEE30 /* ContactListViewController.swift */; };
 		783925732708E2EC00CBEE30 /* NetworkMaganer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783925722708E2EC00CBEE30 /* NetworkMaganer.swift */; };
+		783925762708E3DF00CBEE30 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783925752708E3DF00CBEE30 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		783925672708E1C200CBEE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		783925702708E2BD00CBEE30 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		783925722708E2EC00CBEE30 /* NetworkMaganer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMaganer.swift; sourceTree = "<group>"; };
+		783925752708E3DF00CBEE30 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				783925742708E2F200CBEE30 /* Service */,
 				7839256F2708E1F400CBEE30 /* ViewControllers */,
+				783925772708E3E300CBEE30 /* Models */,
 				7839256E2708E1EB00CBEE30 /* Storyboards */,
 				7839256D2708E1D300CBEE30 /* App */,
 				783925622708E1C200CBEE30 /* Assets.xcassets */,
@@ -100,6 +103,14 @@
 				783925722708E2EC00CBEE30 /* NetworkMaganer.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		783925772708E3E300CBEE30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				783925752708E3DF00CBEE30 /* Contact.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			files = (
 				783925732708E2EC00CBEE30 /* NetworkMaganer.swift in Sources */,
 				7839255A2708E1BF00CBEE30 /* AppDelegate.swift in Sources */,
+				783925762708E3DF00CBEE30 /* Contact.swift in Sources */,
 				7839255C2708E1BF00CBEE30 /* SceneDelegate.swift in Sources */,
 				783925712708E2BD00CBEE30 /* ContactListViewController.swift in Sources */,
 			);
