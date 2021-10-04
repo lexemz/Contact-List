@@ -8,9 +8,7 @@
 import UIKit
 
 class ContactViewCell: UITableViewCell {
-    
-    
-    @IBOutlet var contactImage: UIImageView!
+    @IBOutlet var contactImage: ContactImageView!
     @IBOutlet var contactTitle: UILabel!
     
     override func awakeFromNib() {
@@ -26,20 +24,6 @@ class ContactViewCell: UITableViewCell {
     
     func configure(for contact: Contact) {
         contactTitle.text = contact.name.fullName
-        let defaultErrorImage = UIImage(systemName: "person.crop.circle")
-        
-        DispatchQueue.global().async {
-            let imageData = NetwokManager.shared.fetchImage(from: contact.picture.large)
-            
-            guard let imageData = imageData else {
-                DispatchQueue.main.async {
-                    self.contactImage.image = defaultErrorImage
-                }
-                return
-            }
-            DispatchQueue.main.async {
-                self.contactImage.image = UIImage(data: imageData)
-            }
-        }
+        contactImage.fetchImage(from: contact.picture.large)
     }
 }

@@ -18,10 +18,20 @@ class NetwokManager {
     
     private init() {}
     
-    func fetchImage(from url: String?) -> Data? {
-        guard let stringURL = url else { return nil }
-        guard let imageURL = URL(string: stringURL) else { return nil }
-        return try? Data(contentsOf: imageURL)
+    func fetchImage(from url: URL, completion: @escaping(Data, URLResponse) -> Void) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, let response = response else {
+                return
+            }
+            
+            // Проверяем, совпадает ли URL, требуемый для конкретной ячейки с URL, который должен прийти с сервера, если не совпадают, то не выдаем изображение ячейке, у которой другой адрес
+            guard url == response.url else { return }
+            
+            DispatchQueue.main.async {
+                completion(data, response)
+            }
+            
+        }.resume()
     }
     
     func fetchContacts(completion: @escaping ([Contact]) -> Void) {
