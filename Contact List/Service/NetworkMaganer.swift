@@ -10,9 +10,9 @@ import Foundation
 class NetwokManager {
     static let shared = NetwokManager()
     
-    private let urlAPI = "https://randomuser.me/api/?results=100"
+    private let urlAPI = "https://randomuser.me/api/"
     private let urlParameters: [URLQueryItem] = [
-        URLQueryItem(name: "results", value: "50")
+        URLQueryItem(name: "results", value: "30")
     ]
     
     
